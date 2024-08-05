@@ -1135,6 +1135,7 @@ body {
     width: 100%;
     left: 0;
     padding-left: 10px;
+    padding-right: 10px;
     transition: 0.3s;
     display: block !important;
     padding-bottom: 50px;
@@ -1146,6 +1147,7 @@ body {
     min-width: 130px;
     width: max-content;
     margin-bottom: 25px;
+    width: 100%;
   }
 
   .carousel-part .text-part h2 {
