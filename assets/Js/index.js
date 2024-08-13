@@ -1,4 +1,53 @@
+$(document).ready(function () {
+    var content = [
+        { id: 1, text: "Niger" },
+        { id: 2, text: "Côte d’Ivoire" },
+        { id: 3, text: "Athens, OH, USA" },
+        { id: 4, text: "Athens, TX, USA" },
+        { id: 5, text: "Athens, AL, USA" }
+    ];
+    var content2 = [
+        { id: 1, text: "Côte d’Ivoire" },
+        { id: 2, text: "Athens" },
+        { id: 3, text: "Athens, OH, USA" },
+        { id: 4, text: "Athens, TX, USA" },
+        { id: 5, text: "Athens, AL, USA" }
+    ];
 
+    $(".js-single-select").select2({
+        data: content,
+        placeholder:'Select a location',
+        allowClear: true, // Enables the user to clear the selection
+        minimumInputLength: 0,
+        width: "100%",
+        templateResult: function (data) {
+            if (!data.id) { return data.text; }
+            var $result = $('<span>' + data.text + '</span>');
+            return $result;
+        },
+        templateSelection: function (data) {
+            return data.text || data.id;
+        }
+    });
+    $(".js-single-select2").select2({
+        data: content2,
+        placeholder:'Select a location',
+        allowClear: true, // Enables the user to clear the selection
+        minimumInputLength: 0,
+        width: "100%",
+        templateResult: function (data) {
+            if (!data.id) { return data.text; }
+            var $result = $('<span>' + data.text + '</span>');
+            return $result;
+        },
+        templateSelection: function (data) {
+            return data.text || data.id;
+        }
+    });
+});
+
+    
+    
     $(document).ready(function () {
     // Owl Carousel initialization
     $(".owl-carousel").owlCarousel({
@@ -24,13 +73,13 @@
     });
 
     // Initially hide the multilevel dropdown section
-    $('.multilevel-dropdown-section').hide();
+    // $('.multilevel-dropdown-section').hide();
 
     // Toggle the multilevel dropdown section when the "Nos Services" link is clicked
-    $('#services-nav').on('click', function (e) {
-        e.preventDefault(); // Prevent the default action of the link
-        $('.multilevel-dropdown-section').toggle(); // Show/Hide the dropdown section
-    });
+    // $('#services').on('click', function (e) {
+    //     e.preventDefault(); // Prevent the default action of the link
+    //     $('.multilevel-dropdown-section').toggle(); // Show/Hide the dropdown section
+    // });
 
     // Hide all dropdowns initially
     $('.services-dropdown').hide();
@@ -91,17 +140,6 @@
         $('.multilevel-dropdown-section').hide(); // Hide the section
     });
 
-    // Initially set the active class on the first item or any desired default item
-    $('.navbar-nav .nav-item').first().addClass('active');
-
-    // Event listener for nav items
-    $('.navbar-nav .nav-item').on('click ', function () {
-        // Remove 'active' class from all items
-        $('.navbar-nav .nav-item').removeClass('active');
-        // Add 'active' class to the clicked item
-        $(this).addClass('active');
-    });
-
     // Scroll to top when the scrollUp button is clicked
     $('.scrollUp-btn a').on('click', function (e) {
         e.preventDefault(); // Prevent the default action of the link
@@ -118,4 +156,41 @@
             $('.scrollUp-btn').fadeOut();
         }
     });
+});
+
+
+
+
+// ACTIVE LINK PART 
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    var pageToNavId = {
+        "index.html": "accueil",
+        "servicesPage.html": "services",
+        "mynitaPage.html": "mynita",
+        "agencesPage.html": "agences",
+        "articlesPage.html":"articles",
+        "proposPage.html":"propos"
+    };
+
+    var activeNavId = pageToNavId[page];
+
+
+    document.querySelectorAll('.nav-link').forEach(function (navLink) {
+        navLink.classList.remove('active');
+    });
+
+
+    if (activeNavId) {
+        document.getElementById(activeNavId).classList.add('active');
+    } else if (path.includes('/portfolioDetails/')) {
+
+        document.getElementById('work-nav').classList.add('active');
+    } else {
+
+        document.getElementById('welcome-nav').classList.add('active');
+    }
 });

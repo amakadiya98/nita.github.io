@@ -6,24 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/accueilStyle.css" />
     <link rel="stylesheet" href="./assets/css/carousel/owl.carousel.css">
     <link rel="stylesheet" href="./assets/css/carousel/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 
-<!-- header section -->
 
 <body>
-
+    <!-- header section -->
     <div class="scrollUp-btn">
         <a>
             <img src="./assets/images/up_arrow_icon.svg" alt="">
         </a>
     </div>
-
-    <!-- header section -->
     <section>
         <div class="header-strip">
         </div>
@@ -42,23 +41,23 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="collapse-link-part">
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                                <li class="nav-item active">
-                                    <a class="nav-link" id="Accueil-nav" aria-current="page" href="#">Accueil</a>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="accueil" aria-current="page" href="/index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="services-nav" href="#">Nos Services</a>
+                                    <a class="nav-link" id="services" href="./servicesPage.html">Nos Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="MyNITA-nav" href="#">MyNITA</a>
+                                    <a class="nav-link" id="mynita" href="./mynitaPage.html">MyNITA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="Nos Agences-nav" href="#">Nos Agences</a>
+                                    <a class="nav-link" id="agences" href="./agencesPage.html">Nos Agences</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="Articles-nav" href="#">Articles</a>
+                                    <a class="nav-link" id="articles" href="./articlesPage.html">Articles</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="À-Propos-nav" href="#">À Propos</a>
+                                    <a class="nav-link" id="propos" href="./proposPage.html">À Propos</a>
                                 </li>
                             </ul>
                             <div class="lang-btn-part">
@@ -85,87 +84,6 @@
             </nav>
         </header>
     </section>
-
-
-    <!-- multiple dropdown -->
-    <div class="multilevel-dropdown-section">
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="btn-group-vertical w-100 mt-2">
-                        <p class="dropdown-text">Envoi et retrait d'argent</p>
-                        <button class="dropdown-btn" id="dropdownButton1">Paiements</button>
-                        <button class="dropdown-btn" id="dropdownButton2">Achats</button>
-                        <button class="dropdown-btn" id="dropdownButton3">Partenaires</button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="services-dropdown" id="servicesDropdown1">
-                        <div class="dropdown">
-                            <ul class="dropdown-menu show position-static w-100">
-
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Paiement facture Nigele </a>
-                                    <ul class="dropdown-menu submenu">
-                                        <li><a class="dropdown-item" href="#">Compteurs prépayés</a></li>
-                                        <li class="dropdown-submenu">
-                                            <a class="dropdown-item" href="#">Compteurs postpayés</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Paiement facture SEEN </a></li>
-                                <li><a class="dropdown-item" href="#">Nita School</a></li>
-                                <li><a class="dropdown-item" href="#">Paiement de salaires</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services-dropdown" id="servicesDropdown2">
-                        <div class="dropdown">
-                            <ul class="dropdown-menu show position-static w-100">
-                                <li><a class="dropdown-item" href="#">Action 2.1</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 2.1</a>
-                                    <ul class="dropdown-menu submenu">
-                                        <li><a class="dropdown-item" href="#">Submenu 2.1.1</a></li>
-                                        <li class="dropdown-submenu">
-                                            <a class="dropdown-item" href="#">Another submenu 2.1.1</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services-dropdown" id="servicesDropdown3">
-                        <div class="dropdown">
-                            <ul class="dropdown-menu show position-static w-100">
-                                <li><a class="dropdown-item" href="#">Action 3.1</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Submenu 3.1</a>
-                                    <ul class="dropdown-menu submenu">
-                                        <li><a class="dropdown-item" href="#">Submenu 3.1.1</a></li>
-                                        <li class="dropdown-submenu">
-                                            <a class="dropdown-item" href="#">Another submenu 3.1.1</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 submenu-container">
-                    <div class="submenu-content">
-                        <!-- Submenus will be dynamically shown here -->
-                    </div>
-                </div>
-            </div>
-            <div class="close-btn" id="close-btn">
-                <a href="">
-                    <img src="./assets/images/Cross_icon.svg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-
 
     <!-- BANNER CAROUSEL SECTION  -->
     <div class="carousel-banner-section">
@@ -289,6 +207,34 @@
                                 <img src="./assets/images/Hand.png" alt="section image" />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- map section -->
+    <div class="map-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3>Calcul des frais d’envoi</h3>
+                    <div class="input-part">
+                        <input type="text" class="text-input" placeholder="Montant">
+                    </div>
+                    <div class="input-part">
+                        <select class="js-single-select" style="width: 100%;">
+                        </select>
+                    </div>
+                    <div class="input-part">
+                        <select class="js-single-select2" style="width: 100%;">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="img-part">
+                        <img src="./assets/images/map_svg.svg" width="100%" alt="">
                     </div>
                 </div>
             </div>
@@ -617,11 +563,10 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 <script src="./assets/Js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="./assets/Js/bootstrap.bundle.min.js"></script>
 <script src="./assets/Js/owl.carousel.min.js"></script>
-<script src="./assets/Js/index.js"></script>
+<script src='./assets/Js/index.js'></script>
 </html>

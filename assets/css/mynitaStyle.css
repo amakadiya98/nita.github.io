@@ -1,0 +1,396 @@
+@import url(./style.css);
+
+
+
+
+
+/* faq accordion */
+
+.faq-accordion {
+    background-color: #E1E1E1;
+    padding: 0px 0px 40px 0;
+}
+
+.accordion-heading-text {
+    padding: 5px 30px;
+    background-color: var(--blue);
+    font-size: 45px;
+    font-weight: 400;
+    color: var(--white);
+    width: 50%;
+    margin: auto;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.faq-accordion .accordion {
+    max-width: 80%;
+    margin: auto;
+}
+
+.faq-accordion .accordion .accordion-item {
+    background-color: transparent;
+    border-radius: 14px !important;
+    border: 0;
+    margin-bottom: 18px;
+}
+
+.faq-accordion .accordion .accordion-item .accordion-header {
+    padding: 0px !important;
+    margin-bottom: 0px;
+    border: 0;
+    background-color: transparent;
+    font-family: "Aeonik TRIAL";
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.faq-accordion .accordion .accordion-item .accordion-button {
+    padding: 14px 80px 14px 25px;
+    background-color: #E1E1E1;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    font-size: "Helvetica" !important;
+    border: 2px solid #243980;
+    border-radius: 500px !important;
+    margin-bottom: 20px;
+}
+
+.faq-accordion .accordion .accordion-item .accordion-button div {
+    text-align: center;
+    color: #243980;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.faq-accordion .accordion-body {
+    padding: 25px 35px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #243980 !important;
+    width: 80%;
+    margin: auto;
+    background-color: #FFFFFF !important;
+    border-bottom-right-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+
+.faq-accordion .accordion-button::after {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-image: url('../images/my-nita/arrow_icon.svg');
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    background-image: url('../images/my-nita/arrow_icon.svg');
+    rotate: 180deg;
+}
+
+.faq-accordion .accordion-item .accordion-collapse {
+    border-bottom-right-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    transform: none !important;
+}
+
+
+.faq-accordion .question-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-accordion .question-part h3 {
+    color: #243980;
+    font-size: 45px;
+    font-weight: 400;
+    margin: 14px 0;
+}
+
+.faq-accordion .question-part p {
+    color: #243980;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.faq-accordion .question-part button {
+    background-color: #008036;
+    padding: 10px 30px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.faq-accordion .question-part button img{
+    margin-left: 5px;
+}
+
+/* transfer page */
+
+.transfer-details {
+    background-color: #E1E1E1;
+}
+
+.transfer-details .text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.transfer-details .text-part h2 {
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.transfer-details .text-part p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.payment-details {
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.payment-details .feature-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-details .feature-part .row {
+    row-gap: 16px;
+}
+
+.payment-details .icon-img {
+    border: 2px solid var(--blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-details .icon-img img {
+    width: 25px;
+    height: 25px;
+}
+
+.payment-details .feature-part h6 {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    width: 70%;
+    margin-top: 8px;
+}
+
+.payment-details .feature-text h4 {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.payment-details .advantage-text {
+    display: flex;
+    margin-top: 35px;
+    gap: 20px;
+}
+
+.payment-details .advantage-text h3 {
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.payment-details .advantage-text h5 {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ranking-section */
+.ranking-section {
+    height: 100vh;
+    background-image: url(../images/my-nita/bluemesssage_image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 70px;
+}
+
+.ranking-section::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/my-nita/message_icon.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+    top: 10%;
+    left: 10%;
+}
+
+.ranking-section .application-strip {
+    position: absolute;
+    bottom: 0px;
+    padding: 50px;
+    width: 100%;
+    background: transparent linear-gradient(90deg, #CF5216 0%, #CF5216FB 16%, #CF5216ED 30%, #CF5216D7 43%, #CF5216B7 56%, #CF52168E 69%, #CF52165C 82%, #CF521621 94%, #CF521600 100%) 0%
+}
+
+.ranking-section .application-strip h3 {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 400;
+    margin-right: 70px;
+}
+
+.ranking-section .application-strip img {
+    width: 250px;
+    height: 50px;
+}
+
+.ranking-right-part {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.ranking-section .circle-design {
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ranking-section .circle-design::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/my-nita/halfblue_icon.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    left: 14px;
+    top: -14px;
+}
+
+.ranking-section .sub-circle {
+    border-radius: 50%;
+    width: 177px;
+    height: 177px;
+    background-color: #7ac0d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking-section .white-circle {
+    border-radius: 50%;
+    width: 164px;
+    height: 164px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.ranking-section .white-circle .plus {
+    color: var(--blue);
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.ranking-section .white-circle .rank-num {
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.ranking-section .white-circle .rank-text {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.ranking-section .row {
+    width: 450px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+
+/* custom-container */
+.custom-container {
+    width: 67% !important;
+}
+
+@media screen and (min-width: 1660px) {
+    .container {
+        max-width: 1620px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .custom-container {
+        width: 90% !important;
+    }
+
+    .custom-container.analytics-button {
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 1550px) {
+    .container {
+        max-width: 92% !important;
+    }
+
+    .custom-container {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    .container {
+        max-width: 100% !important;
+    }
+
+    .custom-container {
+        width: 97% !important;
+    }
+}

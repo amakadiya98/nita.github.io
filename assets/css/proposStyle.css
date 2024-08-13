@@ -1,0 +1,8 @@
+@import url(./style.css);
+
+.banner-section{
+    background-image: url(../images/propos/propos-banner-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
