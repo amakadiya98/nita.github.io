@@ -2,14 +2,14 @@
 
 
 /* banner section  */
-.agences-banner-section{
+.agences-banner-section {
     background-image: url('../images/agences/agences-banner-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
 }
 
-.agences-banner-section .banner-text-part{
+.agences-banner-section .banner-text-part {
     background: transparent linear-gradient(90deg, #FFFFFF 0%, #FFFFFFFD 37%, #FFFFFFF6 51%, #FFFFFFEB 60%, #FFFFFFDA 68%, #FFFFFFC4 75%, #FFFFFFA8 80%, #FFFFFF88 86%, #FFFFFF62 91%, #FFFFFF37 95%, #FFFFFF09 99%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
     display: flex;
     flex-direction: row;
@@ -17,11 +17,11 @@
     padding: 30px 0px;
 }
 
-.agences-banner-section .banner-text-part .text-part{
+.agences-banner-section .banner-text-part .text-part {
     width: 80%;
 }
 
-.agences-banner-section .banner-text-part h2{
+.agences-banner-section .banner-text-part h2 {
     font-size: 44px;
     font-weight: 500;
     color: var(--orange);
@@ -30,9 +30,195 @@
     border-bottom: 3px solid var(--blue);
 }
 
-.agences-banner-section .banner-text-part p{
+.agences-banner-section .banner-text-part p {
     font-size: 28px;
     font-weight: 500;
     text-align: center;
     color: #1D1D1B;
+}
+
+/* map-section */
+
+.map-section {
+    background-color: #E1E1E1;
+    padding: 80px 0;
+}
+
+.map-section .text-content {
+    padding: 45px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.map-section .text-content h4 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.map-section .text-content h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.map-section .text-content .text-part {
+    margin-top: 24px;
+}
+
+.map-section .text-content p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.map-section .text-content button {
+    border-radius: 100px;
+    border: 2px solid var(--white);
+    padding: 7px 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.map-section .location-content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.map-section .location-content .number-code {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.map-section .location-content h3 {
+    font-size: 32px;
+    color: var(--orange);
+    font-weight: 400;
+}
+
+/* circle-row-strip */
+.circle-row-strip {
+    background-color: var(--orange);
+    padding: 40px 0;
+}
+
+.circle-row-strip .circle-design .rank-num {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.circle-row-strip .circle-design .rank-text {
+    font-size: 20px;
+}
+
+.circle-row-strip .circle-design .sub-circle {
+    background-color: var(--orange);
+}
+
+.circle-row-strip .spacing-line {
+    position: relative;
+}
+
+.circle-row-strip .spacing-line::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 30px;
+    background-color: var(--white);
+    top: 72px;
+    right: 0px;
+    border-radius: 2px;
+
+}
+
+.circle-row-strip.searchbar {
+    background-color: var(--orange);
+    padding: 40px 0 150px 0;
+}
+
+.circle-row-strip.searchbar .reverse .circle-design::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/my-nita/halfblue_icon.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    left: -14px;
+    rotate: -90deg;
+    top: -14px;
+}
+
+.searchbar-part {
+    background-color: #C5C5C5;
+    padding: 60px 0 0;
+    margin-bottom: 14px;
+}
+
+.searchbar-part .img-part {
+    margin-top: -180px;
+    margin-left: 86px;
+    z-index: 100;
+    position: relative;
+}
+.searchbar-part .input {
+    position: relative;
+}
+
+.searchbar-part input {
+    border-radius: 200px;
+    padding: 18px 85px 18px 70px;
+    background-color: var(--white);
+    width: 100%;
+    margin-left: auto;
+    border: none;
+    line-height: 0;
+    outline: none;
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.searchbar-part .input::after {
+    position: absolute;
+    top: 11px;
+    left: 50px;
+    content: '';
+    width: 1px;
+    height: 34px;
+    border-left: 1px solid var(--orange);
+}
+.searchbar-part .input::before {
+    border-left: 1px solid var(--orange);
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    content: '';
+    width: 30px;
+    padding-left: 78px;
+    height: 34px;
+    background-image: url(../images/agences/search_svg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }

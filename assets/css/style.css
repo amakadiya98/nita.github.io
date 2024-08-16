@@ -27,6 +27,7 @@ body {
   --orange: #D05216;
   --white: #FFFFFF;
   --gray: #D8D8D8;
+  --black:#1D1D1B;
 
 }
 
@@ -256,7 +257,7 @@ body {
 }
 
 .card-part .text-part p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--white);
   text-align: left;
@@ -274,6 +275,8 @@ body {
   border: none;
   border-radius: 30px;
   margin-top: 60px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* multiple dropdown */
@@ -453,6 +456,85 @@ body {
   border-bottom: none !important;
   border-left: none !important;
 }
+
+
+
+
+
+
+
+/* circle */
+
+.circle-design {
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle-design::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/my-nita/halfblue_icon.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 14px;
+  top: -14px;
+}
+
+.sub-circle {
+  border-radius: 50%;
+  width: 177px;
+  height: 177px;
+  background-color: #7ac0d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-circle {
+  border-radius: 50%;
+  width: 164px;
+  height: 164px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.white-circle .plus {
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.white-circle .rank-num {
+  color: var(--orange);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.white-circle .rank-text {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
 
 
 /* footer-strip */

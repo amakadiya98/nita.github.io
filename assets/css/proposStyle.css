@@ -1,8 +1,374 @@
 @import url(./style.css);
 
-.banner-section{
+.banner-section {
+    padding: 100px 0;
     background-image: url(../images/propos/propos-banner-img.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+
+.banner-section h3 {
+    text-align: center;
+    font-size: 55px;
+    color: black;
+    width: 70%;
+    margin: auto;
+    font-weight: 700;
+}
+
+.banner-text {
+    background-color: var(--orange);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.banner-text h4 {
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+
+.banner-text p {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.nita-details {
+    background-color: var(--gray);
+    padding: 40px 0;
+}
+
+.nita-details p {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.nita-details .text-part {
+    margin-top: 20px;
+}
+
+.nita-details .highLight-text {
+    font-weight: 700;
+    width: 50%;
+}
+
+/* nita-details-cards */
+.nita-details-cards {
+    padding: 0 0 100px 0;
+}
+
+.nita-details-cards .card-part .button-part .card-btn {
+    margin-top: 0px;
+}
+
+.nita-details-cards .card-part .row .col-lg-4:nth-child(odd) .button-part button {
+    color: var(--white);
+    background-color: var(--blue);
+
+}
+
+.nita-details-cards .card-part .row .col-lg-4:nth-child(even) .button-part button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.nita-details-cards .card-part .row .col-lg-4:nth-child(even) .button-part button {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.nita-details-cards .card-part .row .col-lg-4:nth-child(odd) .button-part button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+/* office-details */
+
+.nita-office-details .office-details {
+    padding: 150px 0 150px 50px;
+    background-image: url(../images/propos/nita-office.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nita-office-details .office-details .text-part {
+    width: 50%;
+    margin-left: auto;
+}
+
+.nita-office-details .office-details .text-part h3 {
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.nita-office-details .office-details .text-part h3 span {
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--orange);
+}
+
+.nita-office-details .office-details h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.nita-office-details .consultant-details {
+    padding-bottom: 30px;
+}
+
+.nita-office-details .consultant-details h3 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.nita-office-details .consultant-details h3::before {
+    border-bottom: 4px solid var(--blue);
+    position: absolute;
+    bottom: -15px;
+    left: 45%;
+    content: '';
+    width: 132px;
+    height: 4px;
+}
+
+.nita-office-details .consultant-details p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 25px;
+}
+
+/* input-section */
+.input-section {
+    padding: 60px 0;
+    background: rgba(225, 225, 225, 0.45)
+}
+
+.input-section .label-before {
+    line-height: 20px;
+    font-size: 12px;
+    top: -10px;
+    background: #fff;
+    padding: 0 6px;
+    left: 9px;
+}
+
+.input-section .field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-section .field label::before {
+    content: attr(title);
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #777;
+    transition: 300ms all;
+}
+
+.input-section .field input {
+    width: 100%;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #222;
+    border: 1px solid var(--blue);
+    border-radius: 16px;
+    padding: 14px 30px;
+    background-color: transparent;
+}
+
+.input-section .field input:focus {
+    outline: 0;
+    border-color: var(--blue);
+}
+
+.input-section .field input:valid+label::before {
+    line-height: 20px;
+    font-size: 12px;
+    top: -10px;
+    background: #fff;
+    padding: 0 6px;
+    left: 9px;
+    content: attr(data-title);
+}
+
+.input-section .field input:focus+label::before {
+    line-height: 20px;
+    font-size: 14px;
+    top: -30px;
+    background: transparent;
+    padding: 0 6px;
+    left: 9px;
+    color: var(--black);
+}
+
+.input-section .select-field {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #222;
+    border: 1px solid var(--blue);
+    border-radius: 16px;
+    padding: 21px 30px;
+    background-color: transparent;
+    outline: none;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+/* select:not([size]) {
+    background-image: url(../assets/images/OnlineDetails-img/Polygon.svg) !important;
+} */
+
+
+.input-section .input-submit-btn {
+    margin-top: 50px;
+    padding: 16px 30px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid var(--orange);
+}
+
+.input-section .input-submit-btn:hover {
+    background-color: transparent;
+    color: var(--orange);
+}
+
+
+/* img-card-section */
+.img-card-section {
+    padding: 168px 0;
+    background: rgba(225, 225, 225, 0.45)
+}
+
+.img-card-section button {
+    margin-top: 100px;
+    padding: 8px 30px;
+    border-radius: 100px;
+    border: none;
+    background-color: rgba(208, 82, 22, 0.25);
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.img-card-section button:hover {
+    color: var(--orange);
+}
+
+.img-card-section .card-part .row .col-lg-4 {
+    padding: 0 20px;
+}
+
+.img-card-section .card-part .row .col-lg-4:nth-child(odd) .button-part button {
+    color: var(--white);
+    background-color: var(--orange);
+
+}
+
+.img-card-section .card-part .row .col-lg-4:nth-child(even) .button-part button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.img-card-section .card-part .row .col-lg-4:nth-child(even) .button-part button {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.img-card-section .card-part .row .col-lg-4:nth-child(odd) .button-part button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+
+
+.img-card-section .card-section .row .col-lg-4:nth-child(3n+1) .card {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.img-card-section .card-section .row .col-lg-4:nth-child(3n) .card {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.img-card-section .card-section .row .col-lg-4:nth-child(odd) .card {
+    background-color: var(--blue);
+}
+
+.img-card-section .card-section .row .col-lg-4:nth-child(even) .card {
+    background-color: var(--orange);
+    transform: scale(1.1);
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-card-section .card-section .row .col-lg-4:nth-child(odd) .card .img-box img {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--blue) 50%, var(--orange) 50%);
+    border: 10px solid transparent;
+    border-image: linear-gradient(to bottom, var(--blue) 50%, var(--orange) 50%);
+    border-image-slice: 1;
+    margin-top: -100px;
+}
+
+.img-card-section .card-section .row .col-lg-4:nth-child(even) .card .img-box img {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--orange) 50%, var(--blue) 50%);
+    border: 10px solid transparent;
+    border-image: linear-gradient(to bottom, var(--orange) 50%, var(--blue) 50%);
+    border-image-slice: 1;
+    margin-top: -50px;
+}
+
+/* .text-content-section */
+
+.text-content-section{
+padding-bottom: 25px;
+}
+
+.text-content-section .heading-text {
+    background-color: var(--blue);
+    padding: 26px 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.text-content-section .secondary-text h6{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 20px;
+}
+.text-content-section .secondary-text p{
+    color: var(--black);
+    font-weight: 400;
+    font-size: 20px;
 }

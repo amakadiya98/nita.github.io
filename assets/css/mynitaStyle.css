@@ -276,7 +276,7 @@
     align-items: center;
 }
 
-.ranking-section .circle-design {
+/* .ranking-section .circle-design {
     background-color: var(--white);
     border-radius: 50%;
     width: 180px;
@@ -350,7 +350,13 @@
     width: 450px;
     row-gap: 30px;
     justify-content: center;
-}
+} */
+
+.ranking-section .row {
+    width: 450px;
+    row-gap: 30px;
+    justify-content: center;
+  }
 
 
 /* custom-container */
