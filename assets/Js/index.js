@@ -1,38 +1,73 @@
 $(document).ready(function () {
     var content = [
-        { id: 1, text: "Niger" },
-        { id: 2, text: "Côte d’Ivoire" },
-        { id: 3, text: "Athens, OH, USA" },
-        { id: 4, text: "Athens, TX, USA" },
-        { id: 5, text: "Athens, AL, USA" }
+        { id: 1, text: "Niger", img: "./assets/images/input-flag1.svg" }, // Placeholder option
+        { id: 2, text: "Côte d’Ivoire", img: "./assets/images/input-flag2.svg" },
+        { id: 3, text: "Athens, OH, USA", img: "./assets/images/input-flag1.svg" },
+        { id: 4, text: "Athens, TX, USA", img: "./assets/images/input-flag1.svg" },
+        { id: 5, text: "Athens, AL, USA", img: "./assets/images/input-flag1.svg" }
     ];
     var content2 = [
-        { id: 1, text: "Côte d’Ivoire" },
-        { id: 2, text: "Athens" },
-        { id: 3, text: "Athens, OH, USA" },
-        { id: 4, text: "Athens, TX, USA" },
-        { id: 5, text: "Athens, AL, USA" }
+        { id: 1, text: "Côte d’Ivoire", img: "./assets/images/input-flag2.svg" }, // Placeholder option
+        { id: 2, text: "Athens", img: "./assets/images/input-flag2.svg" },
+        { id: 3, text: "Athens, OH, USA", img: "./assets/images/input-flag2.svg" },
+        { id: 4, text: "Athens, TX, USA", img: "./assets/images/input-flag2.svg" },
+        { id: 5, text: "Athens, AL, USA", img: "./assets/images/input-flag2.svg" }
+    ];
+    var content3 = [
+        { id: 1, text: "Vous recherchez une agence ?"}, // Placeholder option
+        { id: 2, text: "Dapoya dans la gare de Rimbo"},
+        { id: 3, text: "Dapoya dans la gare de STM" },
+        { id: 4, text: "Kalgodin à côté de la gare de Rahimo"},
+        { id: 5, text: "Cinkassi sur la voie nationale en face de BSIC dans la gare de STM "},
+        {id:6 , text:"Kalgondi fase station OLA"}
     ];
 
     $(".js-single-select").select2({
         data: content,
-        placeholder:'Select a location',
-        allowClear: true, // Enables the user to clear the selection
+        placeholder: 'Select a location',
+        allowClear: true, 
         minimumInputLength: 0,
         width: "100%",
         templateResult: function (data) {
             if (!data.id) { return data.text; }
-            var $result = $('<span>' + data.text + '</span>');
+            var $result = $(
+                '<span><img src="' + data.img + '" style="width:16px; height:16px; margin-right:10px; border-radius:50%" />' + data.text + '</span>'
+            );
             return $result;
         },
         templateSelection: function (data) {
-            return data.text || data.id;
+            if (!data.id) { return data.text; }
+            var $selection = $(
+                '<span><img src="' + data.img + '" style="width:16px; height:16px; margin-right:4px; border-radius:50%" />' + data.text + '</span>'
+            );
+            return $selection;
         }
     });
     $(".js-single-select2").select2({
         data: content2,
-        placeholder:'Select a location',
-        allowClear: true, // Enables the user to clear the selection
+        placeholder: 'Select a location',
+        allowClear: true, 
+        minimumInputLength: 0,
+        width: "100%",
+        templateResult: function (data) {
+            if (!data.id) { return data.text; }
+            var $result = $('<span><img src="' + data.img + '" style="width:16px; height:16px; margin-right:10px; border-radius:50%" />' + data.text + '</span>');
+            return $result;
+        },
+        templateSelection: function (data) {
+            if (!data.id) { return data.text; }
+            var $selection = $(
+                '<span><img src="' + data.img + '" style="width:16px; height:16px; margin-right:4px; border-radius:50%" />' + data.text + '</span>'
+            );
+            return $selection;
+        }
+    });
+
+
+    $(".js-single-select3").select2({
+        data: content3,
+        placeholder: 'Vous recherchez une agence ?',
+        allowClear: true, 
         minimumInputLength: 0,
         width: "100%",
         templateResult: function (data) {
@@ -41,14 +76,26 @@ $(document).ready(function () {
             return $result;
         },
         templateSelection: function (data) {
-            return data.text || data.id;
+            if (!data.id) { return data.text; }
+            var $selection = $(
+                '<span>' + data.text + '</span>'
+            );
+            return $selection;
         }
     });
 });
 
-    
-    
-    $(document).ready(function () {
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
     // Owl Carousel initialization
     $(".owl-carousel").owlCarousel({
         items: 1,
@@ -103,14 +150,17 @@ $(document).ready(function () {
     // Add event listeners for click and hover
     $('#dropdownButton1').on('click mouseenter', function () {
         handleDropdownToggle('#dropdownButton1', '#servicesDropdown1');
+        handleBorderClass();
     });
 
     $('#dropdownButton2').on('click mouseenter', function () {
         handleDropdownToggle('#dropdownButton2', '#servicesDropdown2');
+        handleBorderClass();
     });
 
     $('#dropdownButton3').on('click mouseenter', function () {
         handleDropdownToggle('#dropdownButton3', '#servicesDropdown3');
+        handleBorderClass();
     });
 
     // Handle submenu toggles
@@ -161,6 +211,8 @@ $(document).ready(function () {
 
 
 
+
+
 // ACTIVE LINK PART 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -172,8 +224,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "servicesPage.html": "services",
         "mynitaPage.html": "mynita",
         "agencesPage.html": "agences",
-        "articlesPage.html":"articles",
-        "proposPage.html":"propos"
+        "articlesPage.html": "articles",
+        "proposPage.html": "propos"
     };
 
     var activeNavId = pageToNavId[page];
@@ -193,4 +245,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById('welcome-nav').classList.add('active');
     }
+});
+
+
+
+// border adding
+
+const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+
+const handleBorderClass = () => {
+    const allButtons = document.querySelectorAll('.all-btn');
+    const isActive = document.querySelector('.dropdown-btn.active');
+    if (isActive) {
+        allButtons.forEach(item => {
+            item.classList.add('border-btn');
+        });
+    } else {
+        allButtons.forEach(button => {
+            button.classList.remove('border-btn');
+        });
+    }
+};
+dropdownButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        handleBorderClass();
+    });
 });

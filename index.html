@@ -220,14 +220,23 @@
             <div class="row">
                 <div class="col-lg-5">
                     <h3>Calcul des frais d’envoi</h3>
-                    <div class="input-part">
-                        <input type="text" class="text-input" placeholder="Montant">
+
+                    <div class="field">
+                        <div class="input-part montant-input">
+                        <input type="text" required id="inputFirst" placeholder="100 000" class="text-input">
+                        <label for="inputFirst" title="Montant" data-title="Montant"></label>
                     </div>
-                    <div class="input-part">
+                </div>
+
+
+                    <!-- <div class="input-part">
+                        <input type="text" class="text-input" placeholder="Montant">
+                    </div> -->
+                    <div class="input-part localisation-input">
                         <select class="js-single-select" style="width: 100%;">
                         </select>
                     </div>
-                    <div class="input-part">
+                    <div class="input-part envoyer-input">
                         <select class="js-single-select2" style="width: 100%;">
                         </select>
                     </div>

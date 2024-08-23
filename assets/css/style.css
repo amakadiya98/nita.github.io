@@ -412,6 +412,7 @@ body {
 
 .services-dropdown .dropdown .dropdown-menu {
   background-color: transparent !important;
+  border: none !important;
 }
 
 .dropdown-item {
@@ -477,10 +478,10 @@ body {
   border-left: none !important;
 }
 
-
-
-
-
+.border-btn {
+  border-left: 0.6px solid #ffffff5e !important;
+  border-right: 0.6px solid #FFFFFf5e !important;
+}
 
 
 /* circle */
@@ -779,7 +780,17 @@ body {
 }
 
 
+@media screen and (max-width:620px) {
+
+}
+
 @media screen and (max-width:520px) {
+  .header-strip {
+    height: 8px;
+}
+  .header-section .navbar {
+    padding: 10px 0 !important;
+}
   .footer-section .logo-section {
     display: flex;
     flex-direction: column;

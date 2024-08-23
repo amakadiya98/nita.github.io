@@ -1,5 +1,58 @@
 @import url(./style.css);
 
+/*  */
+.select2-results__options {
+    padding: 16px !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--orange) !important;
+    color: white;
+    border-radius: 6px;
+}
+.select2-dropdown {
+    background-color: #d7d7d7 !important;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #ffffff !important;
+    border: none !important;
+    cursor: text;
+    padding: 20px 90px 20px 60px !important;
+    width: 100% !important;
+    height: 70px !important;
+    border-radius: 50px !important;
+    outline: none !important;
+}
+  
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none !important;
+  }
+  
+  .select2-container--default .select2-selection--single .select2-selection__clear {
+    display: none !important;
+  }
+.select2-search--dropdown .select2-search__field {
+    padding: 10px !important;
+    outline-color: var(--orange) !important;
+}
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+
+    color: #706F6F !important;
+    font-size: 20px !important;
+  }
+  
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0px !important;
+  }
+  
+
 
 /* banner section  */
 .agences-banner-section {
@@ -11,7 +64,7 @@
 }
 
 .agences-banner-section .banner-text-part {
-    background: transparent linear-gradient(90deg, #FFFFFF 0%, #FFFFFFFD 37%, #FFFFFFF6 51%, #FFFFFFEB 60%, #FFFFFFDA 68%, #FFFFFFC4 75%, #FFFFFFA8 80%, #FFFFFF88 86%, #FFFFFF62 91%, #FFFFFF37 95%, #FFFFFF09 99%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    background: radial-gradient(circle, rgba(255, 255, 255,1) 66%, rgba(255,255,255,0) 100%);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -190,52 +243,42 @@
 
 .searchbar-part .input {
     position: relative;
+    width: 100% !important;
 }
 
-.searchbar-part input {
-    border-radius: 200px;
-    padding: 18px 85px 18px 70px;
-    background-color: var(--white);
-    width: 100%;
-    margin-left: auto;
-    border: none;
-    line-height: 0;
-    outline: none;
-    font-size: 20px;
-    color: var(--black);
-    font-weight: 400;
-}
 
 .searchbar-part .input::after {
     position: absolute;
-    top: 11px;
+    top: 17px;
     left: 50px;
     content: '';
     width: 1px;
     height: 34px;
     border-left: 1px solid var(--orange);
+    z-index: 50;
+}
+
+.seacrchbar-icon{
+    margin-left: -58px;
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+
 }
 
 .searchbar-part .input::before {
     border-left: 1px solid var(--orange);
     position: absolute;
-    top: 14px;
-    right: 0px;
+    top: 17px;
+    right: 70px;
     content: '';
-    width: 30px;
-    padding-left: 78px;
+    z-index: 50;
+    width: 1px;
     height: 34px;
-    background-image: url(../images/agences/search_svg.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
 
 
-
-@media screen and (max-width: px) {
-   
-}
 
 @media screen and (max-width: 991px) {
     .agences-banner-section .banner-text-part .text-part {
@@ -275,9 +318,29 @@
     .searchbar-part .img-part {
         display: none;
     }
+    .select2-container--default .select2-selection--single {
+        padding: 12px 60px 12px 50px !important;
+        height: 55px !important;
+    }
+    .searchbar-part .input::before {
+        top: 14px;
+        right: 55px;
+        height: 24px;
+    }
+    .searchbar-part .input::after {
+        top: 14px;
+        left: 34px;
+        height: 24px;
+    }
+    .seacrchbar-icon img{
+        padding-left: 8px;
+    }
 }
 
 @media screen and (max-width: 520px) {
+    .agences-banner-section .banner-text-part {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 66%, rgba(255, 255, 255, 0) 100%);
+    }
     .agences-banner-section .banner-text-part p {
         font-size: 16px;
     }
@@ -317,18 +380,31 @@
     .rank-text {
         font-size: 14px;
     }
-    .searchbar-part .input::before {
-        top: 13px;
-        padding-left: 44px;
-        height: 20px;
-    }
-    .searchbar-part .input::after {
-        top: 13px;
-        left: 28px;
-        height: 20px;
-    }
+
     .searchbar-part input {
         padding: 12px 47px 12px 40px;
         font-size: 18px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: 16px !important;
+    }
+    /* .select2-container--default .select2-selection--single .select2-selection__rendered {
+        overflow: scroll !important;
+    } */
+    .select2-container--default .select2-selection--single {
+        padding: 12px 59px 12px 42px !important;
+        height: 50px !important;
+    }
+    .searchbar-part {
+        margin-bottom: 6px;
+    }
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        font-size: 12px;
+    }
+    .select2-results__option--selectable {
+        font-size: 12px !important;
+    }
+    .select2-results__options {
+        padding: 10px !important;
     }
 }

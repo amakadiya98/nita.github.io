@@ -297,14 +297,17 @@
 
 .bg-circle::after {
     position: absolute;
-    top: -30%;
+    top: -26%;
+    right: 0%;
     content: "";
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background-color: var(--blue);
-    border: 50px solid var(--orange);
+    width: 800px;
+    height: 800px;
+    background-image: url(../images/my-nita/half-circle.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -1;
+
 }
 
 
@@ -317,9 +320,32 @@
     .container {
         max-width: 1620px !important;
     }
+  
+}
+@media screen and (max-width: 1550px) {
+    .bg-circle::after {
+        top: -35%;
+        right: 0%;
+        width: 700px;
+        height: 800px;
+    }
+}
+@media screen and (max-width: 1220px) {
+    .bg-circle::after {
+        top: -35%;
+        right: 0%;
+        width: 600px;
+        height: 800px;
+    }
 }
 
 @media screen and (max-width: 991px) {
+    .bg-circle::after {
+        top: -8%;
+        right: 0%;
+        width: 100%;
+        height: 800px;
+    }
     .custom-container {
         width: 90% !important;
     }
@@ -332,9 +358,6 @@
         padding: 35px 0;
     }
 
-    .bg-circle::after {
-        display: none;
-    }
 
     .ranking-section::after {
         position: absolute;
@@ -383,6 +406,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .bg-circle::after {
+        top: -20%;
+        right: 0%;
+        width: 100%;
+        height: 800px;
+    }
     .accordion-heading-text {
         width: 70%;
         font-size: 32px;
@@ -424,6 +453,12 @@
 }
 
 @media screen and (max-width: 520px) {
+    .bg-circle::after {
+        top: -42%;
+        right: 0%;
+        width: 100%;
+        height: 800px;
+    }
     .accordion-heading-text {
         width: 100%;
         font-size: 24px;
@@ -492,6 +527,14 @@
         top: 0%;
     }
 }
+@media screen and (max-width: 400px) {
+.bg-circle::after {
+    top: -60%;
+    right: 0%;
+    width: 100%;
+    height: 800px;
+}
+}
 
 
 
@@ -504,9 +547,6 @@
         width: 80% !important;
     }
 
-    .bg-circle::after {
-        left: -60px;
-    }
 }
 
 @media screen and (max-width: 797px) {

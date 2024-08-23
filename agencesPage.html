@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/agencesStyle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -244,45 +245,46 @@
         </div>
     </section>
 
-  <!-- seacrchbar section -->
-  <section class="searchbar-section">
-    <div class="circle-row-strip searchbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="spacing-line d-flex align-items-center justify-content-center">
-                        <div class="circle-design">
-                            <div class="sub-circle">
-                                <div class="white-circle">
-                                    <div class="plus"></div>
-                                    <div class="rank-num">12</div>
-                                    <p class="rank-text">Pays</p>
+    <!-- seacrchbar section -->
+    <section class="searchbar-section">
+        <div class="circle-row-strip searchbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="spacing-line d-flex align-items-center justify-content-center">
+                            <div class="circle-design">
+                                <div class="sub-circle">
+                                    <div class="white-circle">
+                                        <div class="plus"></div>
+                                        <div class="rank-num">12</div>
+                                        <p class="rank-text">Pays</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="spacing-line d-flex align-items-center justify-content-center">
-                        <div class="circle-design">
-                            <div class="sub-circle">
-                                <div class="white-circle">
-                                    <div class="plus">+</div>
-                                    <div class="rank-num">300</div>
-                                    <p class="rank-text">Localités</p>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="spacing-line d-flex align-items-center justify-content-center">
+                            <div class="circle-design">
+                                <div class="sub-circle">
+                                    <div class="white-circle">
+                                        <div class="plus">+</div>
+                                        <div class="rank-num">300</div>
+                                        <p class="rank-text">Localités</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="circle-design">
-                            <div class="sub-circle">
-                                <div class="white-circle">
-                                    <div class="plus">+</div>
-                                    <div class="rank-num">2000</div>
-                                    <p class="rank-text">Agences</p>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="circle-design">
+                                <div class="sub-circle">
+                                    <div class="white-circle">
+                                        <div class="plus">+</div>
+                                        <div class="rank-num">2000</div>
+                                        <p class="rank-text">Agences</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -290,22 +292,27 @@
                 </div>
             </div>
         </div>
-    </div>
-      <!-- seacrchbar part -->
-      <div class="searchbar-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-0">
-                    <img class="img-part" src="./assets/images/agences/zebramen_image.png" width="100%" alt="">
-                </div>
-                <div class="col-md-8 col-sm-12">
-                    <div class="input">
-                        <input type="text" placeholder="Vous recherchez une agence ?">
+        <!-- seacrchbar part -->
+        <div class="searchbar-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-0">
+                        <img class="img-part" src="./assets/images/agences/zebramen_image.png" width="100%" alt="">
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <div class="input localisation-input">
+                                <select class="js-single-select3" style="width: 100%;">
+                                </select>
+                            </div>
+
+                            <button class="seacrchbar-icon"><img src="./assets/images/agences/search_svg.svg" width="30px" height="30px" alt="">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
     <!-- seacrchbar section -->
@@ -365,8 +372,14 @@
                     <img class="img-part" src="./assets/images/agences/zebramen_image.png" width="100%" alt="">
                 </div>
                 <div class="col-md-8 col-sm-12">
-                    <div class="input">
-                        <input type="text" placeholder="Vous recherchez une agence ?">
+                    <div class="d-flex align-items-center">
+                        <div class="input localisation-input">
+                            <select class="js-single-select3" style="width: 100%;">
+                            </select>
+                        </div>
+
+                        <button class="seacrchbar-icon"><img src="./assets/images/agences/search_svg.svg" width="30px" height="30px" alt="">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -443,6 +456,7 @@
 
 </body>
 <script src="./assets/Js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="./assets/Js/bootstrap.bundle.min.js"></script>
 <script src="./assets/Js/owl.carousel.min.js"></script>
 <script src='./assets/Js/index.js'></script>

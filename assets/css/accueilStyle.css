@@ -124,6 +124,7 @@
 .map-section {
   background-color: var(--blue);
   padding: 50px 0;
+  overflow: hidden;
 }
 
 .map-section h3 {
@@ -133,12 +134,106 @@
   margin-bottom: 16px;
 }
 
+/* input */
+
+.map-section .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  padding-top: 5px !important;
+}
+
+.map-section .input-part{
+  position: relative;
+}
+.map-section .input-part.montant-input{
+margin-bottom: -12px;
+}
+.map-section .input-part.montant-input::after {
+  position: absolute;
+  content: "Frs CFA";
+  font-size: 12px;
+  font-weight: 500;
+  color: #706F6F;
+  width: 100px;
+  height: 16px;
+  top: 28%;
+  right: -6%;
+}
+.map-section .input-part.localisation-input::after {
+  position: absolute;
+  content: "Localisation";
+  font-size: 12px;
+  font-weight: 500;
+  color: #706F6F;
+  width: 100px;
+  height: 16px;
+  top: 12%;
+  left: 8%;
+}
+.map-section .input-part.envoyer-input::after {
+  position: absolute;
+  content: "Envoyer vers";
+  font-size: 12px;
+  font-weight: 500;
+  color: #706F6F;
+  width: 100px;
+  height: 16px;
+  top: 12%;
+  left: 8%;
+}
+
+.map-section .montant-input .text-input {
+  padding: 20px 106px 20px 40px;
+}
+
+.map-section .field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.map-section .field label::before {
+  content: attr(title);
+  position: absolute;
+  top: -4px;
+  left: 42px;
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #777;
+  transition: 300ms all;
+}
+
+.map-section .field input:valid+label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background-color: #E1E1E1;
+  padding: 0 6px;
+  left: 35px;
+  border-radius: 6px;
+  content: attr(data-title);
+}
+
+.map-section .field input:focus+label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  border-radius: 6px;
+  background: #E1E1E1;
+  padding: 0 6px;
+  left: 35px;
+}
+
+/*  */
+
+
 .map-section .text-input {
   width: 100%;
   height: 70px;
   border-radius: 50px;
   border: none;
   outline: none;
+  font-weight: 500;
   padding: 20px 40px;
   font-size: 20px;
   background-color: #E1E1E1;
@@ -152,7 +247,7 @@
   background-color: #E1E1E1 !important;
   border: none !important;
   cursor: text;
-  padding: 20px 40px !important;
+  padding: 20px 20px !important;
   width: 100% !important;
   height: 70px !important;
   border-radius: 50px !important;
@@ -282,7 +377,7 @@
   background-color: var(--orange);
 }
 
-.card-section .row .col-lg-4:nth-child(even) .card button{
+.card-section .row .col-lg-4:nth-child(even) .card button {
   color: var(--blue);
 }
 
@@ -294,7 +389,8 @@
 .card-section .row .col-lg-4:nth-child(odd) .card {
   background-color: var(--blue);
 }
-.card-section .row .col-lg-4:nth-child(odd) .card button{
+
+.card-section .row .col-lg-4:nth-child(odd) .card button {
   color: var(--orange);
 }
 
@@ -795,6 +891,33 @@
 }
 
 @media screen and (max-width:520px) {
+  .map-section .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 16px !important;
+    padding-top: 5px !important;
+}
+  .map-section .input-part.envoyer-input::after {
+    font-size: 10px;
+    top: 8%;
+    left: 8%;
+}
+  .map-section .input-part.localisation-input::after {
+    font-size: 10px;
+    top: 8%;
+    left: 8%;
+}
+  .map-section .field label::before {
+    top: -10px;
+    left: 23px;
+    font-size: 10px;
+}
+.map-section .input-part.montant-input::after {
+  font-size: 10px;
+  top: 22%;
+}
+.map-section .text-input {
+  padding: 20px 40px;
+  font-size: 16px;
+}
   .map-section .text-input {
     height: 50px !important;
     padding: 20px !important;
@@ -830,7 +953,8 @@
     width: 70% !important;
     text-align: center;
   }
-  .solution-section .container{
+
+  .solution-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -870,13 +994,15 @@
     width: 20px !important;
     height: 20px !important;
   }
-  .envoyez-section1 .container{
+
+  .envoyez-section1 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .envoyez-section2 .container{
+
+  .envoyez-section2 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
